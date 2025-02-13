@@ -88,7 +88,7 @@ export const showStats = async (req, res) => {
 
     const defaultStats = {
         pending: stats.pending || 0,
-        interview: stat.interview || 0,
+        interview: stats.interview || 0,
         declined: stats.declined || 0,
     }
 
