@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser'
 import cloudinary from 'cloudinary'
 import helmet from 'helmet'
 import mongSanitize from 'express-mongo-sanitize'
-
+import { populateData } from './populate.js'
 
 //routers
 import jobRouter from './routes/jobRouter.js'
@@ -64,7 +64,7 @@ const startServer = async () => {
             useUnifiedTopology: true,
         });
         console.log('Connected to MongoDB');
-
+        await populateData()
         app.listen(port, () => {
             console.log(`Server running on PORT ${port}...`);
         });
