@@ -11,7 +11,7 @@ router.route('/stats').get(showStats)
 
 router.route('/:id')
     .get(validateIdParam, getJob)
-    .patch(checkForTestUser, validateJobInput, validateIdParam, updateJob)
+    .patch(checkForTestUser, validateIdParam, validateJobInput, updateJob)
     .delete(checkForTestUser, validateIdParam, deleteJob)
 
 export default router

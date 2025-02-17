@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser'
 import cloudinary from 'cloudinary'
 import helmet from 'helmet'
 import mongSanitize from 'express-mongo-sanitize'
-import { populateData } from './populate.js'
+//import { populateData } from './populate.js'
 
 //routers
 import jobRouter from './routes/jobRouter.js'
@@ -57,21 +57,24 @@ app.use(errorHandlerMiddleware)
 
 const port = process.env.PORT || 5000
 
-const startServer = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log('Connected to MongoDB');
-        await populateData()
-        app.listen(port, () => {
-            console.log(`Server running on PORT ${port}...`);
-        });
-    } catch (error) {
-        console.error('MongoDB Connection Error:', error);
-        process.exit(1);
-    }
-};
+try {
+    await mongoose.connect(process.env.MONGO_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
+    console.log('Connected to MongoDB');
+    //await populateData()
+    app.listen(port, () => {
+        console.log(`Server running on PORT ${port}...`);
+    });
+} catch (error) {
+    console.error('MongoDB Connection Error:', error);
+    process.exit(1);
+}
 
-startServer()
+
+// const startServer = async () => {
+    
+// };
+
+// startServer()
