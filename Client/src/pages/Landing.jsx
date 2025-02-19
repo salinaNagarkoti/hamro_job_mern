@@ -13,10 +13,10 @@ function Landing() {
             </nav>
             <div className="container page">
                 <div className="info">
-                    <h1>job <span>tracking</span> app</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima voluptas alias obcaecati, ipsum facilis quod,
-                        non dignissimos beatae sequi aliquam ullam placeat. Possimus
-                        consequuntur soluta, debitis eaque perferendis laborum id.</p>
+                    <h1>job <span>apply</span> System</h1>
+                    <p>A Job Apply System is a comprehensive web application that streamlines the process of applying for jobs,
+                        both for job seekers and employers. It includes multiple components and functionalities that make it easier for both
+                        sides to interact and manage job applications efficiently. </p>
                     <Link to='/register' className='btn register-link'>Register</Link>
                     <Link to='/login' className='btn '>Login/Demo User</Link>
                 </div>

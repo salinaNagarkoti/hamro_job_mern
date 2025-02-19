@@ -46,7 +46,7 @@ function Profile() {
                         <FormRow type='text' labelText='last name' name='lastName' defaultValue={lastName} />
                         <FormRow type='email' name='email' defaultValue={email} />
                         <FormRow type='text' name='location' defaultValue={location} />
-                        <SubmitBtn />
+                        <SubmitBtn formBtn />
                     </div>
                 </Form>
             </Wrapper>
